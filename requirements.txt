@@ -1,0 +1,40 @@
+# --- Core Web Framework ---
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+
+# --- Configuration ---
+python-dotenv>=1.0.0
+
+# --- LLM (OpenAI API) ---
+openai>=1.0.0
+
+# --- Database (MongoDB) ---
+motor>=3.0.0  # Async driver
+pymongo>=4.0.0 # Sync driver (for initial load, etc.)
+
+# --- Data Handling & Validation ---
+pandas>=1.5.0 # For reading CSV
+pydantic[email]>=1.10.0 # For FastAPI models
+
+# --- File Uploads (FastAPI) ---
+python-multipart>=0.0.5
+
+# --- STT (Whisper) ---
+openai-whisper>=20231117
+
+# --- TTS (Coqui TTS) ---
+# IMPORTANT: Install PyTorch FIRST using the command from pytorch.org for your specific OS/CPU/CUDA setup!
+# Example (CPU): pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# Example (CUDA 11.8): pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# --- After PyTorch is installed manually, then install TTS: ---
+TTS>=0.22.0 # Coqui TTS library (check PyPI for latest version)
+
+# --- LipSync (Wav2Lip Dependencies - Placeholder in code) ---
+numpy>=1.21.6 # Often handled by PyTorch/TTS install, but good to list
+scipy>=1.7.3
+opencv-python>=4.6.0.66 # Specific version often helps compatibility
+
+# --- General Utilities ---
+requests>=2.28.0
+httpx>=0.24.0
+ffmpeg-python>=0.2.0
